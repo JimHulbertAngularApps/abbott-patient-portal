@@ -1,0 +1,86 @@
+@import 'global-styles/variables';
+@import 'global-styles/font-styles';
+
+html, body { height: 100%; }
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: Gotham Book, sans-serif;
+  overflow: hidden;
+}
+
+.primary-action-button {
+  background-color: $app-blue;
+  color: white;
+}
+
+table {
+  width: 100%;
+  box-shadow: 0 0 0 0;
+}
+
+.multiline-row {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+
+  a {
+    color: $app-blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+}
+
+.multicolumn-row {
+  display: flex;
+  flex-direction: row;
+  line-height: 2;
+  justify-content: space-between;
+}
+
+.data-row:nth-child(odd) {
+  background: #F0F7FB;
+}
+
+::ng-deep .mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
+  color: $app-blue;
+}
+
+.actions-div {
+  display: flex;
+}
+
+.mat-button.uri-action-button {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  min-width: 24px;
+  padding: 0;
+  font-family: 'Gotham Book';
+
+  .mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+  }
+}
+
+.mat-sort-header-container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mat-header-cell {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mat-cell {
+  padding: 10px;
+}

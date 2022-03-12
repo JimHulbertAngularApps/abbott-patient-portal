@@ -1,0 +1,29 @@
+@import "../styles.scss";
+
+.main-div {
+  height: 100%;
+  margin: 0 4em 0 4em;
+}
+
+.writtenBy {
+  @include font-medium-16;
+}
+
+.header {
+  @include font-bold-28;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 36px;
+  align-items: center !important;
+  padding-top: 1.875rem !important;
+  padding-bottom: 1.875rem !important;
+  background-color: $contrast-blue !important;
+  color: white;
+}
+
+.outlet-div {
+  width: 100%;
+  height: 100%;
+}

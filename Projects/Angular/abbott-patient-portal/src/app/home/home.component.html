@@ -1,0 +1,45 @@
+<div class="main-content-container">
+  <div class="actionContainer">
+    <button mat-stroked-button class="primary-action-button btn" (click)="addPatient()">Add Patient</button>
+  </div>
+  <div class="body-content">
+    <table mat-table [dataSource]="sortedPatientData" matSort (matSortChange)="sortData($event)" class="mat-elevation-z8">
+      <ng-container matColumnDef="patientName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Patient Name</th>
+        <td mat-cell *matCellDef="let patient">
+          <div class="multiline-row">
+            <span><a (click)="viewPatient(patient)">{{patient?.firstName | titlecase}} {{patient?.lastName | titlecase}}</a></span>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef mat-header> Address</th>
+        <td mat-cell *matCellDef="let patient">
+          <div class="multiline-row">
+            <span>{{patient?.street}}</span>
+            <span>{{patient?.city}} {{patient?.state}} {{patient?.zipcode}}</span>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="clinic">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Associated Clinic</th>
+        <td mat-cell *matCellDef="let patient">
+          <div class="multicolumn-row">
+            <span>{{patient?.clinic}}</span>
+            <div class="actions-div">
+              <button mat-button class="uri-action-button" matTooltip="Edit">
+                <mat-icon (click)="editPatient(patient)">edit</mat-icon>
+              </button>
+              <button mat-button class="uri-action-button" matTooltip="Delete">
+                <mat-icon (click)="deletePatient(patient)">delete</mat-icon>
+              </button>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row class="data-row" *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+

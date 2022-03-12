@@ -1,0 +1,74 @@
+@import 'src/global-styles/variables';
+
+.main-div {
+  .title-div {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    display: block;
+    font-size: 32px;
+    margin-block-start: 0em;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: $app-blue;
+  }
+
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 120px;
+  }
+
+  .row {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .full-width-field {
+    width: 100%;
+  }
+
+  .half-width-field {
+    width: 50%;
+  }
+
+  .state-field {
+    width: 150px;
+  }
+
+  .button-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.mat-sort-header-container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Error Styling */
+.error label {
+  color: #cc0033;
+}
+
+.error input[type=text] {
+  background-color: #fce4e4;
+  border: 1px solid #cc0033;
+  outline: none;
+}
+
+.error .error-message {
+  display: inline-block;
+}
+

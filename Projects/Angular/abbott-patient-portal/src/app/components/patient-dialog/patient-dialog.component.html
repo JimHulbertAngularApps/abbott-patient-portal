@@ -1,0 +1,120 @@
+<div class="main-div">
+  <div class="title-div">
+    <h1>{{dialogTitle}}</h1>
+  </div>
+  <ng-container [formGroup]="dataForm">
+    <div class="row">
+      <mat-form-field class="half-width-field" appearance="outline" >
+        <mat-label>First Name</mat-label>
+        <input name="firstName"
+               formControlName="firstName"
+               type="text"
+               required
+               matInput
+               autocomplete="nope">
+        <mat-error *ngIf="formControls.firstName?.hasError('required')">
+          First Name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="half-width-field" appearance="outline" >
+        <mat-label>Last Name</mat-label>
+        <input name="lastName"
+               formControlName="lastName"
+               type="text"
+               required
+               matInput
+               autocomplete="nope">
+        <mat-error *ngIf="formControls.lastName?.hasError('required')">
+          Last Name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="clinic-field" appearance="outline">
+        <mat-label>Clinic</mat-label>
+        <input name="clinicInput"
+               type="text"
+               matInput
+               required
+               formControlName="clinic"
+               [matAutocomplete]="clinicAuto">
+        <mat-autocomplete #clinicAuto="matAutocomplete">
+          <mat-option *ngFor="let clinicOption of filteredClinicOptions | async" [value]="clinicOption">
+            {{clinicOption}}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="formControls.clinic.errors?.requireMatch">
+          Value must match available options
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="full-width-field" appearance="outline" >
+        <mat-label>Street Address</mat-label>
+        <input name="street"
+               formControlName="street"
+               type="text"
+               required
+               matInput
+               autocomplete="nope">
+        <mat-error *ngIf="formControls.street?.hasError('required')">
+          Street Address is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="half-width-field" appearance="outline" >
+        <mat-label>City</mat-label>
+        <input #city
+               formControlName="city"
+               type="text"
+               required
+               matInput
+               autocomplete="nope">
+        <mat-error *ngIf="formControls.city?.hasError('required')">
+          City is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="state-field" appearance="outline" >
+        <mat-label>State</mat-label>
+        <input #state
+               formControlName="state"
+               type="text"
+               required
+               mask="AA"
+               matInput
+               autocomplete="nope">
+        <mat-error *ngIf="formControls.state?.hasError('required')">
+          State is required
+        </mat-error>
+        <mat-error *ngIf="formControls.state.hasError('minlength')">
+          State is invalid
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="half-width-field" appearance="outline" >
+        <mat-label>Zip Code</mat-label>
+        <input #zipcode
+               formControlName="zipcode"
+               type="text"
+               required
+               mask="00000"
+               matInput
+               autocomplete="nope">
+        <mat-error *ngIf="formControls.zipcode.hasError('required')">
+          Zip Code is required
+        </mat-error>
+        <mat-error *ngIf="formControls.zipcode.hasError('minlength')">
+          Zip Code is invalid
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>{{data.canEdit ? 'Cancel' : 'Close'}}</button>
+      <button *ngIf="this.data.canEdit"
+              id="submitPatient"
+              mat-button
+              type="button"
+              [disabled]="!formControls || !dataForm.valid"
+              [mat-dialog-close]="getCloseActionObject('submit')">Save
+      </button>
+    </mat-dialog-actions>
+  </ng-container>
+</div>

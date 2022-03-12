@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+
+.error-message {
+  color: #cc0033;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
+
+.form-group .error-message {
+  display: none;
+}
+
+.clinic-text {
+  max-width: 350px;
+  align-self: flex-start;
+}
+
+.btn {
+  border: 1px solid $app-blue;
+  border-radius: 0;
+  margin: 20px;
+}
+

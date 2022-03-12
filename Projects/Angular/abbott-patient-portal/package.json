@@ -1,0 +1,89 @@
+{
+  "name": "abbott-patient-portal",
+  "jest": {
+    "verbose": false,
+    "preset": "jest-preset-angular",
+    "roots": [
+      "src"
+    ],
+    "transform": {
+      "^.+\\.(ts|js|html)$": "ts-jest"
+    },
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupJest.ts"
+    ],
+    "moduleNameMapper": {
+      "@app/(.*)": "<rootDir>/src/app/$1",
+      "@assets/(.*)": "<rootDir>/src/assets/$1",
+      "@core/(.*)": "<rootDir>/src/app/core/$1",
+      "@env": "<rootDir>/src/environments/environment",
+      "@src/(.*)": "<rootDir>/src/src/$1",
+      "@state/(.*)": "<rootDir>/src/app/state/$1"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "<rootDir>/tsconfig.spec.json",
+        "stringifyContentPathRegex": "\\.html$",
+        "astTransformers": [
+          "jest-preset-angular/build/InlineFilesTransformer",
+          "jest-preset-angular/build/StripStylesTransformer"
+        ]
+      }
+    }
+  },
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --configuration production",
+    "build:dev": "ng build --configuration dev",
+    "build:qa": "ng build --configuration qa",
+    "build:uat": "ng build --configuration uat",
+    "test": "jest --coverage",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "test:watch": "jest --watch --coverage --runInBand --detectOpenHandles"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^12.2.13",
+    "@angular/cdk": "^12.2.12",
+    "@angular/common": "~12.2.13",
+    "@angular/compiler": "~12.2.13",
+    "@angular/core": "~12.2.13",
+    "@angular/forms": "~12.2.13",
+    "@angular/material": "^12.2.12",
+    "@angular/platform-browser": "~12.2.13",
+    "@angular/platform-browser-dynamic": "~12.2.13",
+    "@angular/router": "~12.2.13",
+    "@ng-idle/core": "^11.1.0",
+    "@ng-idle/keepalive": "^11.0.3",
+    "@ngxs/store": "^3.7.2",
+    "@types/jest": "^26.0.23",
+    "jwt-decode": "^2.2.0",
+    "ngx-mask": "^12.0.0",
+    "ngx-toastr": "^12.0.1",
+    "rxjs": "~6.6.3",
+    "uuid": "^8.3.2",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^12.2.13",
+    "@angular/cli": "~12.2.13",
+    "@angular/compiler-cli": "~12.2.13",
+    "@angular/language-service": "~12.2.13",
+    "codelyzer": "^6.0.2",
+    "jasmine-spec-reporter": "~5.0.0",
+    "jest": "^27.3.1",
+    "jest-canvas-mock": "^2.3.1",
+    "jest-preset-angular": "8.3.2",
+    "ts-jest": "^27.0.7",
+    "ts-node": "~8.3.0",
+    "tslib": "^2.0.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.3.5"
+  }
+}

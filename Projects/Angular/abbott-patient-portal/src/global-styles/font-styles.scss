@@ -1,0 +1,197 @@
+@import 'variables';
+
+// BOLD FONTS
+@mixin font-bold-60 {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 60px;
+}
+
+@mixin font-bold-32 {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 32px;
+}
+
+@mixin font-bold-28 {
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 28px;
+}
+
+@mixin font-bold-14 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 14px;
+}
+
+
+// MEDIUM FONTS
+@mixin font-medium-60 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 60px;
+}
+
+@mixin font-medium-56 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 56px;
+}
+
+@mixin font-medium-50 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 50px;
+}
+
+@mixin font-medium-48 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 48px;
+}
+
+@mixin font-medium-36 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 36px;
+}
+
+@mixin font-medium-32 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 32px;
+}
+
+@mixin font-medium-28 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 28px;
+}
+
+@mixin font-medium-26 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 26px;
+}
+
+@mixin font-medium-24 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 24px;
+}
+
+@mixin font-medium-20 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 20px;
+}
+
+@mixin font-medium-18 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 18px;
+}
+
+@mixin font-medium-16 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 16px;
+}
+
+@mixin font-medium-14 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 14px;
+}
+
+@mixin font-medium-12 {
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 12px;
+}
+
+// BOOK FONTS
+@mixin font-book-50 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 50px;
+}
+
+@mixin font-book-32 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 32px;
+}
+
+@mixin font-book-28 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 28px;
+}
+
+@mixin font-book-24 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 24px;
+}
+
+@mixin font-book-20 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 20px;
+}
+
+@mixin font-book-18 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 18px;
+}
+
+@mixin font-book-16 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 16px;
+}
+
+@mixin font-book-14 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 14px;
+}
+
+@mixin font-book-13 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 13px;
+}
+
+@mixin font-book-12 {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 12px;
+}
+
+// NORMAL FONTS
+@mixin font-normal-32 {
+  font-family: "Gotham", sans-serif;
+  font-size: 32px;
+}
+
+@mixin font-normal-28 {
+  font-family: "Gotham", sans-serif;
+  font-size: 28px;
+}
+
+@mixin font-normal-20 {
+  font-family: "Gotham", sans-serif;
+  font-size: 20px;
+}
+
+@mixin font-normal-18 {
+  font-family: "Gotham", sans-serif;
+  font-size: 18px;
+}
+
+@mixin font-normal-16 {
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+}
+
+@mixin font-normal-14 {
+  font-family: "Gotham", sans-serif;
+  font-size: 14px;
+}
+
+@mixin font-normal-12 {
+  font-family: "Gotham", sans-serif;
+  font-size: 12px;
+}
+
+// LIGHT FONTS
+@mixin font-light-64 {
+  font-family: "Gotham Light", sans-serif;
+  font-size: 64px;
+}
+
+@mixin font-light-24 {
+  font-family: "Gotham Light", sans-serif;
+  font-size: 24px;
+}
+
+@mixin font-light-125 {
+  font-family: "Gotham Light", sans-serif;
+  font-size: 1.25rem;;
+}
