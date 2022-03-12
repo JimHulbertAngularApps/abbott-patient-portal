@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .pipe(take(1))
       .subscribe((action: any) => {
         if (action && action.actionText === 'submit') {
-          action.newPatientData.patientId = this.sortedPatientData.length + 1;
+          action.newPatientData.patientId = this.sortedPatientData.filteredData.length + 1;
           this.store.dispatch(new AddPatient(action.newPatientData));
         }
       });
